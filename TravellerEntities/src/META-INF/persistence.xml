@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="TravellerEntitiesPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.example.traveller.model.Airport</class>
+    <class>com.example.traveller.model.Flight</class>
+    <class>com.example.traveller.model.Passenger</class>
+    <class>com.example.traveller.model.Payment</class>
+    <class>com.example.traveller.model.Ticket</class>
+    <properties>
+      <property name="javax.persistence.jdbc.password" value="travel"/>
+      <property name="javax.persistence.jdbc.user" value="travel"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/travel"/>
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+      <!-- property name="eclipselink.logging.level" value="FINE"/ -->
+    </properties>
+  </persistence-unit>
+</persistence>
