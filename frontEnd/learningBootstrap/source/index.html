@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Page layout 7</title>
+	<title>Page layout 5</title>
 	<!--<style>
 		body {
 			font: 80% arial, helvetica, sans-serif;
@@ -20,7 +19,9 @@
 		}
 		
 		#navigation {
-			float: left;
+			position: absolute;
+			left: 0;
+			top: 70px;
 			width: 150px;
 		}
 		
@@ -28,51 +29,38 @@
 			margin-left: 150px;
 		}
 		
-		#footer {
-			clear: left;
-			background: #ccc;
-		}
-		
-		#footer p {
-			margin: 0;
-		}
-		
-	</style> -->
+	</style>-->
     <link href="/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-
-	<div id="header" class="row-fluid span12">
+	<div class="container"> 
+	   <div id="header" class="">
 		<h1>Charles Darwin</h1>
-	</div>
-    
-	<div class="container-fluid">
-        
-            <ul>
-                <li><a href="">Biology</a></li>
-                <li><a href="">Evolution</a></li>
-                <li><a href="">Natural Selection</a></li>
-                <li><a href="">Genetics</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Erasmus Darwin</a></li>
-                <li><a href="">Lamarck</a></li>
-                <li><a href="">Charles Darwin</a></li>
-                <li><a href="">Wallace</a></li>
-                <li><a href="">Dawkins</a></li>
-            </ul>
-    </div>
-    <div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	</div>
-
+	   </div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a href="">Biology</a></li>
+			<li class="disabled"><a href="">Evolution</a></li>
+			<li><a href="">Natural Selection</a></li>
+			<li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                    Genetics
+                    <span class="caret"></span>
+                </a>
+                
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="">Erasmus Darwin</a></li>
+                    <li><a href="">Lamarck</a></li>
+                    <li><a href="">Charles Darwin</a></li>
+                    <li><a href="">Wallace</a></li>
+                    <li><a href="">Dawkins</a></li>
+                </ul>
+            </li>
+		</ul>
 	<div id="content">
 
 		<h2>On the Origin of The Origin</h2>
-		<p>Darwin's father was dead set on his son becoming a cleric but even though the young rapscallion began to study theology he found worms much more interesting.</p>
+		<p class="text-warning">Darwin's father was dead set on his son <abbr class="initialism" title=" example of abrebiation">becoming</abbr> a cleric but even though the young rapscallion began to study theology he found worms much more interesting.</p>
 		<p>When a lonely man with a moustache asked Darwin to ride with him on his boat named after a dog, Darwin agreed and set off around the world fiddling with wildlife.</p>
 		<p>Some say it was a load of birds from a bunch of islands hundreds of miles off the Ecuadorean coast that inspired his now widely accepted explanation of the mechanism of evolution. "Why does that bird on that island have a beak like that while that finch on that island has a beak like that? AHA! I've got it! Natural Selection!" he thought. It wasn't actually quite like that, but, y'know, it's a fine, popular romantic myth.</p>
 
@@ -86,19 +74,42 @@
 		<p>Chuck D revised The Origin five times, toning down each one a bit more than the one before it, partly to appease his religious wife. Who also happened to be his cousin. But some years later he'd had enough of trying to disguise the logical conclusion that humans are descended from the same common ancestor as all other animals and his third classic, <em>The Descent of Man</em>, was published and <em>really</em> pissed off the religious establishment.</p>
 
 	</div>
+<div>
 
-	<div id="footer">
-
-		<p>Content is &copy; Copyright Patrick Griffiths.</p>
-
-		<p>This page is valid HTML5.</p>
-
-	</div>
+    <table class="table table-striped table-bordered table-condensed">
+        <caption>Example table</caption>
+        <thead>
+            <tr class="info">
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>		
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>		
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>		
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 
 
 	<!-- Link back to HTML Dog: -->
 	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+    </div>
 
 </body>
 
