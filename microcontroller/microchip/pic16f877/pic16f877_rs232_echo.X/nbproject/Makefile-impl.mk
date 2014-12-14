@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=pic16f877_rs232_echo.X
+PROJECTNAME=pic16f877_led_blinking.X
 
 # Active Configuration
 DEFAULTCONF=default
