@@ -1,0 +1,12 @@
+
+# 1 "system.c"
+
+# 34 "system.h"
+void ConfigureOscillator(void);
+
+# 5 "system.c"
+void ConfigureOscillator(void)
+{
+
+# 13
+}

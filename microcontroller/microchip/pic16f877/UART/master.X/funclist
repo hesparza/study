@@ -1,0 +1,6 @@
+___aldiv: CODE, 1665 0 143
+_UART_Init: CODE, 1808 0 236
+_main: CODE, 1623 0 42
+__initialization: CODE, 2044 0 0
+_UART_Write: CODE, 1613 0 10
+Total: 431
