@@ -20,22 +20,11 @@ class Ruteador {
 	 */
 	public function enviar() {				
 		$parametros = isset($_GET['uri']) ? explode('/', $_GET['uri']) : '/';
-// 		echo '<pre/>';
-// 		print_r($parametros);
-// 		echo '$parametros = ' . $parametros . '<br />';
 		$uriGetParametro = $parametros[0];
-// 		echo '<br /><hr />$uriGetParametro = ' .$uriGetParametro . '<br /><hr />';
 
 		foreach($this->_uri as $llave => $valor) {			
 			if (preg_match("#^$valor$#", $uriGetParametro)) {
-// 				echo 'match! on => ' . $valor . "<br />";
-// 				echo 'key = ' . $llave. '<br />';
-				
 				$metodoSeleccionado = $this->_metodo[$llave];
-// 				echo 'Metodo Seleccionado = ' . $metodoSeleccionado;
-				
-				
-
 				$metodoSeleccionado = new $metodoSeleccionado($parametros);
 				$metodoSeleccionado->rutearLlamada();
 			}

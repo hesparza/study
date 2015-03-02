@@ -7,8 +7,6 @@ class Controlador {
 	private $_procesadorDeRespuestas;
 	
 	function __construct($parametros) {
-       //echo "In BaseClass constructor\n";
-	   
 		if((isset($_SERVER['HTTP_ACCEPT'])) && false !== strpos($_SERVER['HTTP_ACCEPT'], "html")) {
 		    $this->_formato = "html";
 		} else {
@@ -32,12 +30,8 @@ class Controlador {
 				$this->_metodo = 'obtener';
 				break;
 		}
-// 		echo '<br /><hr />' . '$this->_metodo = ' . $this->_metodo . '<br />';
-		$this->_parametros = $parametros;
-// 		echo '<br /><hr />' . '$this->_parametros = ';
-// 		print_r($this->_parametros);
-// 		echo '<br />';
-		
+
+		$this->_parametros = $parametros;		
 		$this->procesadorDeRespuestas = new ProcesadorDeRespuestas();
 
 		set_exception_handler(function ($e) use ($_formato) {
@@ -55,10 +49,10 @@ class Controlador {
 	}
 
 	/**
-	 * Recibe las piezas que forman el URL y determina el método que hay que llamar
+	 * Determina el método que hay que llamar
 	 */
 	function rutearLlamada() {
-		// route the request using all this info
+		// rutear la llamada a su metodo correspondiente
 		switch(strtolower($this->_parametros[1])) {
 			case 'usuario':
 		        $nombre_metodo = $this->_metodo . "Usuario";
@@ -74,7 +68,5 @@ class Controlador {
 		}
 		$this->procesadorDeRespuestas->procesarRespuesta("json",200,"Ok", $datos);
 	}
-	
-
 }
 ?>

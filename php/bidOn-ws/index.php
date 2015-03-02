@@ -7,8 +7,5 @@ $ruteador->agregar('/','Home');
 $ruteador->agregar('/about', 'About');
 $ruteador->agregar('/controlador', 'Controlador');
 
-// echo '<pre>';
-// print_r($ruteador);
-
 $ruteador->enviar();
 ?>
