@@ -10,7 +10,7 @@ class Usuario {
 	var $nomUsuario;
 	var $contrasena;
 	var $reputacion;
-	
+
 	function obtenerId() { return $this->id; }
 	function obtenerEstadoUsuarioId() { return $this->estadoUsuarioId; }
 	function obtenerRolId() { return $this->rolId; }
@@ -23,7 +23,7 @@ class Usuario {
 	function obtenerReputacion() { return $this->reputacion; }
 
 	function establecerId($id) { $this->id = $id; }
-	function establecerEstadoUsuarioId($estadoUsuarioId) { $this->estadoUsuarioId =$estadoUsuarioId; }
+	function establecerEstadoUsuarioId($estadoUsuarioId) { $this->estadoUsuarioId = $estadoUsuarioId; }
 	function establecerRolId($rolId) { $this->rolId = $rolId; }
 	function establecerNombre($nombre) { $this->nombre = $nombre; }
 	function establecerApellidoP($apellidoP) { $this->apellidoP = $apellidoP; }
