@@ -11,7 +11,7 @@ package com.pi4j.wiringpi;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -138,7 +138,7 @@ public class Lcd {
      * @param d5 pin number for driving bit 6 (only used in 8-bit mode)
      * @param d6 pin number for driving bit 7 (only used in 8-bit mode)
      * @param d7 pin number for driving bit 8 (only used in 8-bit mode)
-     * @return The return value is the ‘handle’ to be used for all subsequent calls to the lcd library when dealing with that LCD, or -1 to indicate a fault. (Usually incorrect parameters)
+     * @return The return value is the ???handle??? to be used for all subsequent calls to the lcd library when dealing with that LCD, or -1 to indicate a fault. (Usually incorrect parameters)
      */
     public static native int lcdInit(int rows, int cols, int bits, int rs, int strb, int d0,
             int d1, int d2, int d3, int d4, int d5, int d6, int d7);
@@ -216,7 +216,7 @@ public class Lcd {
     /**
      * <p>
      * This allows you to re-define one of the 8 user-definable chanracters in the display. The data array is 8 bytes
-     * which represent the character from the top-line to the bottom line. Note that the characters are actually 5×8,
+     * which represent the character from the top-line to the bottom line. Note that the characters are actually 5??8,
      * so only the lower 5 bits are used. The index is from 0 to 7 and you can subsequently print the character defined
      * using the lcdPutchar() call.
      * </p>

@@ -11,7 +11,7 @@ package com.pi4j.wiringpi;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import com.pi4j.util.NativeLibraryLoader;
 
 /**
  * <p>
- * WiringPi includes a library which can make it easier to use the Raspberry Pi’s on-board I2C interface.
+ * WiringPi includes a library which can make it easier to use the Raspberry Pi???s on-board I2C interface.
  * </p>
  *
  * <p>
@@ -42,7 +42,7 @@ import com.pi4j.util.NativeLibraryLoader;
  * If you need a baud rate other than the default 100Kbps, then you can supply this on the command-line:
  *  > gpio load i2c 1000
  *
- * will set the baud rate to 1000Kbps – ie. 1,000,000 bps. (K here is times 1000) *
+ * will set the baud rate to 1000Kbps ??? ie. 1,000,000 bps. (K here is times 1000) *
  * </p>
  *
  * <p>
@@ -82,12 +82,12 @@ public class I2C {
      * </p>
      *
      * <p>
-     * The return value is the standard Linux filehandle, or -1 if any error – in which case, you can consult
+     * The return value is the standard Linux filehandle, or -1 if any error ??? in which case, you can consult
      * errno as usual.
      * </p>
      *
      * <p>
-     * E.g. the popular MCP23017 GPIO expander is usually device Id 0×20, so this is the number you would pass
+     * E.g. the popular MCP23017 GPIO expander is usually device Id 0??20, so this is the number you would pass
      * into wiringPiI2CSetup().
      * </p>
      *

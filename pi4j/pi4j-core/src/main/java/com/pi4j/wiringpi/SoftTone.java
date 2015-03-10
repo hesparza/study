@@ -11,7 +11,7 @@ package com.pi4j.wiringpi;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,11 +33,11 @@ import com.pi4j.util.NativeLibraryLoader;
 /**
  * <p>
  * WiringPi includes a software-driven sound handler capable of outputting a simple tone/square wave signal on any of
- * the Raspberry Pi’s GPIO pins.
+ * the Raspberry Pi???s GPIO pins.
  * </p>
  *
  * <p>
- * There are some limitations… To maintain a low CPU usage, the minimum pulse width is 100μS. That gives a maximum
+ * There are some limitations??? To maintain a low CPU usage, the minimum pulse width is 100??S. That gives a maximum
  * frequency of  1/0.0002 = 5000Hz.
  * </p>
  *

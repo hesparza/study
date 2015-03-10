@@ -11,7 +11,7 @@ package com.pi4j.temperature;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -256,7 +256,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Farenheit to Celsius temperature scale
      * 
-     * FORMULA = [°C] = ([°F] − 32) × 5/9
+     * FORMULA = [??C] = ([??F] ??? 32) ?? 5/9
      *
      * @param temperature value in degrees Farenheit
      * @return converted temperature value in degrees Celsius
@@ -268,7 +268,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Farenheit to Kelvin temperature scale
      * 
-     * FORMULA = [K] = ([°F] + 459.67) × 5/9
+     * FORMULA = [K] = ([??F] + 459.67) ?? 5/9
      *
      * @param temperature value in degrees Farenheit
      * @return converted temperature value in degrees Kelvin
@@ -280,7 +280,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Farenheit to Rankine temperature scale
      * 
-     * FORMULA = [°R] = [°F] + 459.67
+     * FORMULA = [??R] = [??F] + 459.67
      *
      * @param temperature value in degrees Farenheit
      * @return converted temperature value in degrees Rankine
@@ -292,7 +292,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Celsius to Farenheit temperature scale
      * 
-     * FORMULA = [°F] = [°C] × 9/5 + 32
+     * FORMULA = [??F] = [??C] ?? 9/5 + 32
      *
      * @param temperature value in degrees Celsius
      * @return converted temperature value in degrees Farenheit
@@ -304,7 +304,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Celsius to Kelvin temperature scale
      * 
-     * FORMULA = [K] = [°C] + 273.15
+     * FORMULA = [K] = [??C] + 273.15
      *
      * @param temperature value in degrees Celsius
      * @return converted temperature value in degrees Kelvin
@@ -316,7 +316,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Celsius to Rankine temperature scale
      * 
-     * FORMULA = [°R] = ([°C] + 273.15) × 9/5
+     * FORMULA = [??R] = ([??C] + 273.15) ?? 9/5
      *
      * @param temperature value in degrees Celsius
      * @return converted temperature value in degrees Rankine
@@ -328,7 +328,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Kelvin to Celsius temperature scale
      * 
-     * FORMULA = [°C] = [K] − 273.15
+     * FORMULA = [??C] = [K] ??? 273.15
      *
      * @param temperature value in degrees Kelvin
      * @return converted temperature value in degrees Celsius
@@ -340,7 +340,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Kelvin to Farenheit temperature scale
      * 
-     * FORMULA = [°F] = [K] × 9/5 − 459.67
+     * FORMULA = [??F] = [K] ?? 9/5 ??? 459.67
      *
      * @param temperature value in degrees Kelvin
      * @return converted temperature value in degrees Farenheit
@@ -352,7 +352,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Kelvin to Rankine temperature scale
      * 
-     * FORMULA = [°R] = [K] × 9/5
+     * FORMULA = [??R] = [K] ?? 9/5
      *
      * @param temperature value in degrees Kelvin
      * @return converted temperature value in degrees Rankine
@@ -364,7 +364,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Rankine to Farenheit temperature scale
      * 
-     * FORMULA = [°F] = [°R] − 459.67
+     * FORMULA = [??F] = [??R] ??? 459.67
      *
      * @param temperature value in degrees Rankine
      * @return converted temperature value in degrees Farenheit
@@ -376,7 +376,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Rankine to Celsius temperature scale
      * 
-     * FORMULA = [°C] = ([°R] − 491.67) × 5/9
+     * FORMULA = [??C] = ([??R] ??? 491.67) ?? 5/9
      *
      * @param temperature value in degrees Rankine
      * @return converted temperature value in degrees Celsius
@@ -388,7 +388,7 @@ public class TemperatureConversion
     /**
      * Convert temperature from Rankine to Kelvin temperature scale
      * 
-     * FORMULA = [K] = [°R] × 5/9
+     * FORMULA = [K] = [??R] ?? 5/9
      *
      * @param temperature value in degrees Rankine
      * @return converted temperature value in degrees Kelvin

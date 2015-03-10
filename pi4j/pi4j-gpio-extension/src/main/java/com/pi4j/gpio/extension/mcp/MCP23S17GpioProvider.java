@@ -22,7 +22,7 @@ import java.io.IOException;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License"); you
  * may not use this file except in compliance with the License. You may obtain a copy of the License
@@ -108,7 +108,7 @@ public class MCP23S17GpioProvider extends GpioProviderBase implements GpioProvid
 
     public MCP23S17GpioProvider(byte spiAddress, SpiChannel spiChannel, int spiSpeed) throws IOException {
 
-        // IOCON – I/O EXPANDER CONFIGURATION REGISTER
+        // IOCON ??? I/O EXPANDER CONFIGURATION REGISTER
         //
         // bit 7 BANK: Controls how the registers are addressed
         //     1 = The registers associated with each port are separated into different banks
@@ -132,7 +132,7 @@ public class MCP23S17GpioProvider extends GpioProviderBase implements GpioProvid
         // bit 1 INTPOL: This bit sets the polarity of the INT output pin.
         //     1 = Active-high.
         //     0 = Active-low.
-        // bit 0 Unimplemented: Read as ‘0’.
+        // bit 0 Unimplemented: Read as ???0???.
         //
         this(spiAddress ,spiChannel ,spiSpeed, (byte) 0x00001000);
     }

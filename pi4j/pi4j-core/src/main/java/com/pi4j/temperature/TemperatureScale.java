@@ -11,7 +11,7 @@ package com.pi4j.temperature;
  * this project can be found here:  http://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2014 Pi4J
+ * Copyright (C) 2012 - 2015 Pi4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,10 +30,10 @@ package com.pi4j.temperature;
 @SuppressWarnings("unused")
 public enum TemperatureScale {
     
-    CELSIUS("Celsius","°C",TemperatureConversion.ABSOLUTE_ZERO_CELSIUS),
-    FARENHEIT("Farenheit","°F", TemperatureConversion.ABSOLUTE_ZERO_FARENHEIT),
+    CELSIUS("Celsius","??C",TemperatureConversion.ABSOLUTE_ZERO_CELSIUS),
+    FARENHEIT("Farenheit","??F", TemperatureConversion.ABSOLUTE_ZERO_FARENHEIT),
     KELVIN("Kelvin","K", TemperatureConversion.ABSOLUTE_ZERO_KELVIN),
-    RANKINE("Rankine","°R", TemperatureConversion.ABSOLUTE_ZERO_RANKINE);
+    RANKINE("Rankine","??R", TemperatureConversion.ABSOLUTE_ZERO_RANKINE);
     
     private String name;
     private String units;
