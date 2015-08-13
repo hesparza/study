@@ -1,0 +1,19 @@
+<h1>Categories</h1>
+
+<form class="add-new">
+  <div class="input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">&plus;</button>
+    </span>
+  </div><!-- /input-group -->
+</form>
+
+<ul class="list-group">
+  <li class="list-group-item">All</li>
+  {{#each}}
+  <li class="list-group-item">
+    {{#link-to 'category' id}} {{title}} {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
