@@ -7,16 +7,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><spring:message code="add.goal.title"/></title>
+<style type="text/css">
+	.error {
+		color: #FF0000;
+	}
+	.errorblock {
+		color: #000;
+		background-color: #FFEEEE;
+		border: 3px solid #FF0000;
+		padding: 8px;
+		margin: 16px;
+	}
+</style>
 </head>
 <body>
 	<form:form commandName="goal">
+		<form:errors path="*" cssClass="errorblock" element="div" />
 		<table>
 			<tr>
 				<td><spring:message code="add.goal.enter.minutes"/></td>
-				<td><form:input path="minutes"/></td>
+				<td><form:input path="minutes" cssErrorClass="error"/></td>
+				<td><form:errors path="minutes" cssClass="error"/></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" Value="<spring:message code="add.goal.accept"/>"/></td>
+				<td colspan="3"><input type="submit" Value="<spring:message code="add.goal.accept"/>"/></td>
 			</tr>			
 		</table>
 	</form:form>

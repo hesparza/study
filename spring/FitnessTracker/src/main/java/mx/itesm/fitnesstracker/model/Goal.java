@@ -1,7 +1,10 @@
 package mx.itesm.fitnesstracker.model;
 
-public class Goal {
+import org.hibernate.validator.constraints.Range;
 
+public class Goal {
+	
+	@Range(min = 1, max = 120)
 	private int minutes;
 
 	public Goal() {
