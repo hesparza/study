@@ -20,7 +20,7 @@ public class MinutesController {
 		final String METHOD_NAME = this.getClass().getName() + ".addMinutes";
 		System.out.println("Inside " + METHOD_NAME);
 		
-		System.out.println("exercise: " + exercise.getMinutes());
+		System.out.println(METHOD_NAME + ": exercise: " + exercise.getMinutes() + ", activity: " + exercise.getActivity());
 		return "addMinutes";
 	}
 	
