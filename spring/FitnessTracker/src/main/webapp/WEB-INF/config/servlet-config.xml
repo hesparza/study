@@ -17,6 +17,9 @@
 	<!-- For static content -->
 	<mvc:resources location="pdfs" mapping="/pdfs/**"/>
 	
+	<!-- For static content -->
+	<mvc:resources location="js" mapping="/js/**"/>	
+	
 	<!-- For message properties files -->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="messages"/>
 	
@@ -28,6 +31,41 @@
 	<!-- For internationalization -->
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" p:defaultLocale="en"/>
 	
-	<!-- Internal resource view resolver configuration -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/>
+	<!-- Internal resource View Resolver configuration (This one has to be the last view resolver to be called) -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" p:order="2"/>
+	
+	<!-- Bean name View Resolver -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>
+	 
+	<!-- Content negotiating View Resolver -->
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json" value="application/json" />
+								<entry key="xml" value="application/xml" />
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<!-- What framework do we want to use based off the view type is coming through  -->
+		<property name="defaultViews">
+			<list>
+				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+					<constructor-arg>
+						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
+							<property name="autodetectAnnotations" value="true" />
+						</bean>
+					</constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
 </beans>
