@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Orders Tool</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-custom-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div id="page" class="container">		
+		<div id="sidebar" class="col-sm-2 col-md-2">
+			<div class="panel panel-inverse clear-top">		
+				<img src="img/logo.png" class="img-thumbnail img-responsive"/>
+				<div class="panel-heading">
+					<h1 class="panel-title text-center">Orders Management Tool</h1>
+				</div>
+				<div id="navbarButtons" class="list-group">
+					<button id="index.html" class="list-group-item"><span class="glyphicon glyphicon-list"></span> Orders History</button>
+					<button id="item_codes.html" class="list-group-item"><span class="glyphicon glyphicon-info-sign"></span> Item Codes</button>
+					<button id="add_new_order.html" class="list-group-item active"><span class="glyphicon glyphicon-save-file"></span> Add New Order</button>
+					<button id="add_new_item.html" class="list-group-item"><span class="glyphicon glyphicon-save-file"></span> Add New Item</button>
+					<button id="images.html" class="list-group-item"><span class="glyphicon glyphicon-open-file"></span> Images</button>
+				</div>
+				<div class="panel-footer pull-bottom">
+					<p class="small text-center">&copy;All rights reserved</p>
+				</div>
+			</div>
+		</div>
+		<section id="main" class=" col-sm-10 col-md-10">
+			<div class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<h1>Add New Order</h1>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav"><a href="#" class="large"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+				<!-- <label class=""><a href="#" class="btn btn-sm btn-danger">Add New Item</a></label> -->			
+			</div>
+			<div class="panel panel-inverse">				
+				<div class="panel-heading clearfix">
+					<div class="panel-title">
+						<span>New Order</span><span> <label class="btn btn-danger pull-right">Add New Order </label></span> 
+					</div>
+				</div>
+				<div id="main" class="panel-body">
+					<form>
+						<label>Order Type</label> <input type="text" name="order_type" />
+						<label>Order Type</label>
+						<select name="order_types">
+							<option value="type1">Type 1</option>
+							<option value="type2">Type 2</option>
+							<option value="type3">Type 3</option>
+						</select> 
+						<label>Order Language</label>
+						<select name="order_language">
+							<option value="en">English</option>
+							<option value="sp">Spanish</option>
+							<option value="ch">Chinese</option>
+						</select>
+						<label>Date</label><input type="date" name="order_date">
+						<label>Order description</label><input type="text" name="order_description">
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>	
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
