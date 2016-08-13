@@ -34,18 +34,6 @@ export class ProductDetailComponent {
 
     getProduct(id: number) {
         console.log('the id: ' + id);
-        // this._productListService.getProducts()
-        //     .subscribe(
-        //     product => this.product = product,
-        //     error => this.errorMessage = <any>error);
-
-        // this._productListService.getProducts()
-        //     .subscribe(function(result: IProduct[]) {
-        //         console.log('.......gathering the result......');
-        //         this.product = result[0];
-        //         console.log('And this is the product: ' + this.product);
-        //     },
-        //     error => this.errorMessage = <any>error);
 
         this._productListService.getProduct(id)
             .subscribe(
