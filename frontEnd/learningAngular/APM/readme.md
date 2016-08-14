@@ -1,3 +1,7 @@
+This is a demo web application developed as part of a training course I took in Pluralsight.com
+
+Here are the basic instructions to run it, you just need to have Node package manager in order to follow the next steps:
+
 1) Open a command prompt in the project's root directory (APM - Start)
 
 2) Type: `npm install`
