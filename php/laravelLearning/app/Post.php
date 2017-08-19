@@ -45,7 +45,7 @@ class Post {
                 'content' => 'This blog post will get you right on track with Laravel!'
             ],
             [
-                'title' => 'Something elese',
+                'title' => 'Something else',
                 'content' => 'This is some other content'
             ],
             [
