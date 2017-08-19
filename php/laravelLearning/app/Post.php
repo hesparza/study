@@ -5,10 +5,25 @@
  * Date: 7/11/17
  * Time: 12:17 AM
  */
-namespace App\Services;
+namespace App;
 
-class Post {
+use Illuminate\Database\Eloquent\Model;
 
+class Post extends Model {
+    protected $fillable = ['title', 'content'];
+
+    //Establishing relation to other model, in this case Like
+    public function likes() {
+        return $this->hasMany('App\Like', 'post_id');
+    }
+
+    //Establish relation to Tag
+    public function tags() {
+        //withTimestamps is to assure that the timestamps are filled in the pivot table when the relation is created
+        return $this->belongsToMany('App\Tag', 'post_tag', 'post_id', 'tag_id')->withTimestamps();
+    }
+
+    //Old code below
     public function getPosts($session) {
         if(!$session->has('posts')) {
             $this->createDummyData($session);

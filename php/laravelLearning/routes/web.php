@@ -22,6 +22,11 @@ Route::get('post/{id}', [
     'as' => 'blog.post'
 ]);
 
+Route::get('post/{id}/like', [
+    'uses' => 'PostController@getLikePost',
+    'as' => 'blog.post.like'
+]);
+
 Route::get('about', function () {
     return view('other.about');
 })->name('about');
@@ -32,6 +37,7 @@ Route::group(['prefix' => 'admin'], function() {
         'as' => 'admin.index'
     ]);
 
+    //Posts
     Route::get('create', [
         'uses' => 'PostController@getAdminCreate',
         'as' => 'admin.create'
@@ -50,5 +56,36 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('edit', [
         'uses' => 'PostController@postAdminEdit',
         'as' => 'admin.update' /** <--- Note that as the edit route receives a parameter, we cannot call this admin.create **/
+    ]);
+
+    Route::get('delete', [
+        'uses' => 'PostController@postAdminDelete',
+        'as' => 'admin.delete'
+    ]);
+
+    //Tags
+    Route::get('createTag', [
+        'uses' => 'TagController@getAdminCreate',
+        'as' => 'admin.create.tag'
+    ]);
+
+    Route::post('createTag', [
+        'uses' => 'TagController@postAdminCreate',
+        'as' => 'admin.create.tag'
+    ]);
+
+    Route::get('editTag/{id}', [
+        'uses' => 'TagController@getAdminEdit',
+        'as' =>'admin.edit.tag'
+    ]);
+
+    Route::post('editTag', [
+        'uses' => 'TagController@postAdminEdit',
+        'as' => 'admin.update.tag' /** <--- Note that as the edit route receives a parameter, we cannot call this admin.create **/
+    ]);
+
+    Route::get('deleteTag', [
+        'uses' => 'TagController@postAdminDelete',
+        'as' => 'admin.delete.tag'
     ]);
 });
