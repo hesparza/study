@@ -27,7 +27,9 @@
 	<mvc:interceptors>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="ln"/>
 	</mvc:interceptors>
-	
+
+	<!-- Test interceptor -->
+	<bean id="influxdbInterceptor" class="mx.com.itesm.fitnesstracker.interceptor.InfluxdbInterceptor" />
 	<!-- For internationalization -->
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" p:defaultLocale="en"/>
 	
@@ -57,7 +59,7 @@
 		<!-- What framework do we want to use based off the view type is coming through  -->
 		<property name="defaultViews">
 			<list>
-				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
 				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
 					<constructor-arg>
 						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
