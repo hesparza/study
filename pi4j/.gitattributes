@@ -1,4 +1,0 @@
-*.java          text
-*.txt           text
-*.sh            eol=lf
-build           eol=lf
