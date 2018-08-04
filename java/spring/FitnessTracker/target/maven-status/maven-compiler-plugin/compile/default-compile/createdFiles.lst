@@ -1,0 +1,7 @@
+mx/itesm/fitnesstracker/model/Goal.class
+mx/com/itesm/fitnesstracker/interceptor/InfluxdbInterceptor.class
+mx/com/itesm/fitnesstracker/controller/HelloController.class
+mx/itesm/fitnesstracker/model/Exercise.class
+mx/itesm/fitnesstracker/model/Activity.class
+mx/com/itesm/fitnesstracker/controller/GoalController.class
+mx/com/itesm/fitnesstracker/controller/MinutesController.class

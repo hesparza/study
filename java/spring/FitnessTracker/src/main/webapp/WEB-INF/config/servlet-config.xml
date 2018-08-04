@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<!-- Activate the use of annotations to configure our app -->
+	<mvc:annotation-driven/>
+	
+	<!-- Where are we going to scan for annotations -->
+	<context:component-scan base-package="mx.com.itesm.fitnesstracker.controller"></context:component-scan>
+	
+	<!-- For static content -->
+	<mvc:resources location="pdfs" mapping="/pdfs/**"/>
+	
+	<!-- For static content -->
+	<mvc:resources location="js" mapping="/js/**"/>	
+	
+	<!-- For message properties files -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="messages"/>
+	
+	<!-- Interceptor used for internationalization -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="ln"/>
+	</mvc:interceptors>
+
+	<!-- Test interceptor -->
+	<bean id="influxdbInterceptor" class="mx.com.itesm.fitnesstracker.interceptor.InfluxdbInterceptor" />
+	<!-- For internationalization -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" p:defaultLocale="en"/>
+	
+	<!-- Internal resource View Resolver configuration (This one has to be the last view resolver to be called) -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" p:order="2"/>
+	
+	<!-- Bean name View Resolver -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>
+	 
+	<!-- Content negotiating View Resolver -->
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json" value="application/json" />
+								<entry key="xml" value="application/xml" />
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<!-- What framework do we want to use based off the view type is coming through  -->
+		<property name="defaultViews">
+			<list>
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+					<constructor-arg>
+						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
+							<property name="autodetectAnnotations" value="true" />
+						</bean>
+					</constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
+</beans>
